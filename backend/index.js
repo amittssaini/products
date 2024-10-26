@@ -9,3 +9,10 @@ mongoose
 .catch((e)=>console.log(`DB IS NOT CONNECTED ${e}`))
 
 app.listen(process.env.PORT,()=>console.log('SERVER IS LISTEN AT THE PORT ',process.env.PORT))
+
+
+const {savingTransaction}=require('./Controllers/transaction.controller')
+const transactionRouter = require('./Routes/transaction.route')
+app.use(express.json());
+app.get('/initialize',savingTransaction);
+app.use('/transaction',transactionRouter)
