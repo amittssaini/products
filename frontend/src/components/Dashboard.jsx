@@ -104,7 +104,7 @@ const Dashboard = () => {
     // Fetch statistics, bar chart, and pie chart data
     const fetchStatisticsData = async () => {
         try {
-            const response = await axios.get('http://localhost:8082/transaction/combinedStats', {
+            const response = await axios.get('https://products-1-i8s8.onrender.com/transaction/combinedStats', {
                 params: { month }
             });
             setStatistics(response.data.statistics);
@@ -118,7 +118,7 @@ const Dashboard = () => {
     // Fetch paginated transaction data
     const fetchTransactionData = async () => {
         try {
-            const response = await axios.get('http://localhost:8082/transaction', {
+            const response = await axios.get('https://products-1-i8s8.onrender.com/transaction', {
                 params: { page, perPage, search, month }
             });
             setTransactions(response.data.transactions);
