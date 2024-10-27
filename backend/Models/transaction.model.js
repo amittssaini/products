@@ -7,6 +7,7 @@ const transactionSchema = new mongoose.Schema({
   price: Number,
   dateOfSale: Date,
   category: String,
+  image:String,
   sold: Boolean,
 });
 

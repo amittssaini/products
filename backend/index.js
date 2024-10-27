@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
@@ -10,7 +11,7 @@ mongoose
 
 app.listen(process.env.PORT,()=>console.log('SERVER IS LISTEN AT THE PORT ',process.env.PORT))
 
-
+app.use(cors());
 const {savingTransaction}=require('./Controllers/transaction.controller')
 const transactionRouter = require('./Routes/transaction.route')
 app.use(express.json());

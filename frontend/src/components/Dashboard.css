@@ -1,0 +1,91 @@
+/* src/components/Dashboard.css */
+
+.dashboard-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Transaction Table and Dropdown Styling */
+.transaction-table-container {
+    margin-bottom: 20px;
+}
+
+.month-dropdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.month-dropdown-container label {
+    font-size: 1rem;
+    color: #555;
+    margin-right: 10px;
+}
+
+.month-dropdown {
+    padding: 8px 12px;
+    font-size: 1rem;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.month-dropdown:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+/* Centered Statistics */
+.statistics-center {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart Components */
+.charts-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.charts-container > div {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .charts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

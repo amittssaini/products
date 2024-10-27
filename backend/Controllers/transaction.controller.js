@@ -5,6 +5,7 @@ const transactionInstance = new Transaction();
 const axios =require('axios')
 const savingTransaction=async(req,res)=>{
 try {
+    console.log('in saving transaction')
     const response = await axios.get('https://s3.amazonaws.com/roxiler.com/product_transaction.json')
     const transactions=response.data
     const result = await transactionInstance.savingTransaction(transactions)
